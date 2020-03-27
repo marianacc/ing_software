@@ -1,0 +1,49 @@
+### Inserción de un usuario
+
+POST http://localhost:8008/api/v1/clients
+Content-Type: application/json
+Accept:  application/json
+
+{
+  "firstName": "Maria",
+  "lastName": "Iribarne",
+  "birthDate": "1991-04-30T00:00:00.000-0000",
+  "status": true
+}
+
+### Inserción incorrecta de un usuario
+
+POST http://localhost:8008/api/v1/clients
+Content-Type: application/json
+Accept:  application/json
+
+{
+  "birthDate": "1991-04-30T00:00:00.000-0000",
+  "status": true
+}
+
+### Probamos listar todos los clientes
+
+GET http://localhost:8008/api/v1/clients
+Content-Type: application/json
+Accept: application/json
+
+### Eliminamos un cliente
+
+DELETE http://localhost:8008/api/v1/clients/1
+Accept: application/json
+
+### Actualizamos el cliente
+
+PUT http://localhost:8008/api/v1/clients/3
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstName": "Maria",
+  "lastName": "Lopez",
+  "birthDate": "1991-04-30T00:00:00.000-0000",
+  "status": true
+}
+
+###
