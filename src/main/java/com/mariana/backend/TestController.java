@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("api/v1/test")
 public class TestController {
-
     @RequestMapping(method = RequestMethod.GET, produces = MediaType.TEXT_PLAIN_VALUE)
     public ResponseEntity<String> holaMundo(){
         return new ResponseEntity<String>("Hola mundo", HttpStatus.OK);
